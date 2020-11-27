@@ -3,7 +3,7 @@ import json
 
 def main(): 
 
-		content = requests.get("httpsL//cve.circl.lu/api/last")
+		content = requests.get("https://cve.circl.lu/api/last")
 		json = content.json()
 
 		for item in json
