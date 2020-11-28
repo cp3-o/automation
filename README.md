@@ -1,2 +1,2 @@
 # automation
-automate basic security and news
+This is a repository that has small python scripts to automate basic information security 
