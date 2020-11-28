@@ -43,7 +43,7 @@ for thread in thread_list:
 	thread.start()
 
 for thread in thread_list:
-	thread.join
+	thread.join()
 
 # Print final report
 print("Open ports are: ", open_ports)
