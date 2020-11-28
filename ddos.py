@@ -24,7 +24,7 @@ def attack():
 		connections += 1
 		print(connections)
 
-#multi threading 
+# threading 
 for i in range(500):
 	thread = threading.Thread(target=attack)
 	thread.start()
