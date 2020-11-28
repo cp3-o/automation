@@ -24,7 +24,7 @@ def main():
 		article_num = 1
 		for article in article_list:
 			print('[{}} {}'.format(str(article_num), article))
-			article_num++
+			article_num +=
 
 			article_link_click = False
 			while not article_link_click:
