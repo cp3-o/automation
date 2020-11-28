@@ -1,11 +1,14 @@
 import socket 
 import threading
-forme queue import Queue
+from queue import Queue
 
+
+# target infomation 
 target = "127.0.0.1" 
 queue = Queue()
 open_ports = []
 
+#scan ports 
 def portscan(port):
 	try:
 		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -14,10 +17,10 @@ def portscan(port):
 
 	except:
 		return False
+	
 def fill_queue(port_list):
 	for port in port_list:
 		queue.port(port)
-
 
 def worker():
 	while not queue.empty():
@@ -26,11 +29,10 @@ def worker():
 			print("Port {} is open!".format(port))
 			open_ports.append(port)
 
-
-
 port_list = range(1, 1024)
 fill_queue(port_list)
 
+#threads
 thread_list = []
 
 for t in range(500):
@@ -43,5 +45,6 @@ for thread in thread_list:
 for thread in thread_list:
 	thread.join
 
+# Print final report
 print("Open ports are: ", open_ports)
 
