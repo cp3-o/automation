@@ -1,3 +1,6 @@
+#Warning attacking any systems other than your own is illegal. This script is for educational purposes only. The creator takes no responsibility
+# for others actions. 
+
 import socket 
 import threading
 from queue import Queue
